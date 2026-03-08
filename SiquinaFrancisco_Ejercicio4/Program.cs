@@ -34,3 +34,24 @@ persistencia = Console.ReadLine();
 
 Console.Write("Numero de usuarios afectados: ");
 usuarios = int.Parse(Console.ReadLine());
+
+if (tipoIncidente < 1 || tipoIncidente > 4)
+{
+    Console.WriteLine("Tipo de incidente invalido");
+}
+
+if (activo < 1 || activo > 4)
+{
+    Console.WriteLine("Activo invalido");
+}
+
+if (datos < 1 || datos > 4)
+{
+    Console.WriteLine("Tipo de datos invalido");
+}
+
+if (usuarios < 0)
+{
+    Console.WriteLine("Numero de usuarios invalido");
+}
+
