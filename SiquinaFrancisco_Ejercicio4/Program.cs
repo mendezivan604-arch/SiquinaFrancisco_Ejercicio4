@@ -55,3 +55,76 @@ if (usuarios < 0)
     Console.WriteLine("Numero de usuarios invalido");
 }
 
+switch (tipoIncidente)
+{
+    case 1: 
+        switch (activo)
+        {
+            case 2:
+                if (persistencia == "S")
+                {
+                    severidad = "Critica";
+                    respuesta = "Aislar servidor y analizar malware";
+                }
+                else
+                {
+                    severidad = "Alta";
+                    respuesta = "Escaneo completo y limpieza";
+                }
+                break;
+
+            default:
+                severidad = "Media";
+                respuesta = "Escaneo antivirus";
+                break;
+        }
+        break;
+
+    case 2:
+        if (usuarios > 10)
+        {
+            severidad = "Alta";
+            respuesta = "Bloquear correos y advertir usuarios";
+        }
+        else
+        {
+            severidad = "Media";
+            respuesta = "Capacitacion y cambio de contraseñas";
+        }
+        break;
+
+    case 3:
+        if (datos >= 3)
+        {
+            severidad = "Alta";
+            respuesta = "Bloquear accesos y auditar sistema";
+        }
+        else
+        {
+            severidad = "Media";
+            respuesta = "Revisar registros de acceso";
+        }
+        break;
+
+    case 4:
+        if (datos == 4)
+        {
+            severidad = "Critica";
+            respuesta = "Notificar incidente y activar protocolo legal";
+        }
+        else
+        {
+            severidad = "Alta";
+            respuesta = "Contener fuga y revisar permisos";
+        }
+        break;
+}
+
+if (usuarios < 5 && datos == 1)
+{
+    severidad = "Baja";
+    respuesta = "Monitorear sistema";
+}
+
+Console.WriteLine("Severidad del incidente: " + severidad);
+Console.WriteLine("Respuesta recomendada: " + respuesta);
